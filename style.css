@@ -1,0 +1,85 @@
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: url(l.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    
+}
+.logo{
+    height: 50px;
+    width: 50px;
+    cursor: pointer; /*hand like symbol*/
+    background: transparent;
+}
+
+.navbar ul li{
+    display: inline-block;
+    margin: 0 15px;  
+    position: relative; /* for hover effect*/
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+.navbar ul li::after{
+    content: '';        /*important for this effect*/
+    height: 3px;      /* height of under line*/
+    width: 0; /*if it is 2px then 2px clr, and then start this effect*/
+    background-color: gray;    /*line's colour*/
+    position: absolute;   /*important for this effect*/
+    left: 0; /*starting line*/
+    bottom: -10px;      /*gap between li and hover line*/
+    transition: 1s;
+}
+.navbar ul li:hover::after{
+    width: 100%;     /*fully hover line should come and go*/
+}
+.content{
+    
+    top: 50%;   /* it will work only if we give position either as relative or absolute */
+    position: absolute;    /* relative means from the page. absolute means from the parent element*/
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+    color: ghostwhite;
+    
+
+}
+.content h1{
+    font-size: 50px;
+    font-style: italic;
+    text-shadow: 2px 2px grey;
+    
+}
+.content p{
+    font-size: 25px;
+
+}
+button{
+    width: 150px;
+    padding: 15px 15px;
+    margin: 1px 10px;
+    border: 2px solid lightcyan;
+    font-size: 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+    text-shadow: 2px 2px grey;
+    
+}
+
+
+
